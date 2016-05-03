@@ -1,0 +1,722 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body, html{
+    margin:0; padding:0;
+    height:100%;
+    font-family: '微軟正黑體','Microsoft JhengHei',Arial,sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+    /*-webkit-text-stroke: 1px transparent;*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+a.logo{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    width:119px; 
+    height:60px;
+    background: url(../img/logo.png) 0 0 no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+a.homeBtn{position:absolute; top:0; right:0;display:block; width:60px; height:60px;}
+a.homeBtn img{display: block;width: 100%;}
+img.title{
+    margin:0 auto;
+    display:block;
+    width:130px; 
+    height:54px;
+}
+div.header{width: 100%;height: 60px;z-index: 200;top:0;position:fixed;background: #124892;overflow: hidden;}
+div.header h1{
+  font-size: 30px;
+  line-height: 60px;
+  color: #fff;
+  font-weight: bold;
+  font-family: '微軟正黑體','Microsoft JhengHei',Arial,sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 60px 0 119px;
+}
+
+div.container{
+    position:relative;
+    top:60px;
+    width: 100%;
+    background: #ffeff2 url(../img/pc_bg.jpg) no-repeat top center;
+/*     -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;   */
+}
+
+div.container .fin{
+  display: block;
+  width: 640px;
+  margin: auto;
+}
+
+
+
+div.upload{
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+/*     background: url(../img/mainBg.jpg) 0 0 no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;   */  
+}
+div.upload img {width:100%;}
+
+/****** Index ******/
+
+div.index{width: 100%; padding:5% 0 30%;} 
+img.indexTitle{}
+img.indexText{margin-top:-2%;}
+a.indexBtn{display:block; width: 60%;margin:0 auto; margin-top:-5%;}
+a.indexBtn img{width: 100%;}
+
+
+/****** Step 1 ******/
+
+div.step1{width: 100%;padding:5% 0 30%;display:none;}
+img.step1Img{margin-bottom:5%;}
+img.step1Text{margin:2% 0;}
+div.fileUpload{width:80%;margin:3% auto;
+    -webkit-box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.21);
+    box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.21);
+    position: relative;
+    /* overflow: hidden; */
+}
+a.step1Btn{display:block; width: 45%;margin:0 auto; margin-top:-10%;position:relative;z-index:100;}
+a.step1Skip{display:block; width: 22%;position:relative;float:right;margin-right:5%;}
+img.uploadedImage{}
+input[type="file"]{opacity: 0;position: absolute;width: 80%;height: 40%;z-index: 99;font-size: 36px;}
+div.sizeButton{width: 20%; height: 100%; position:absolute;/* margin-left:-10%; */z-index: 101;/* right:-9%; */right:-2%;}
+a.plus{width:100% !important;display:block;position: absolute;top:0;left:0;}
+a.minus{width:100% !important;display:block;/* margin-top:170%; */position: absolute;bottom:0;left:0;}
+
+
+/****** Step 2 ******/
+
+div.step2{padding:5% 0 30%;position:relative;display:none;}
+img.step2Img{margin-bottom:5%;}
+img.step2Text{margin:1% 0;}
+a.stepPrev, a.stepNext{display:block; width: 40%;margin:0 auto; margin-top:0;position:relative;}
+a.stepPrev{float:left;margin-left:7%;}
+a.stepNext{float:right;margin-right:7%;}
+div.prevNext{width:100%;}
+div.frameSelect{width:80%;margin:7% auto 3%;z-index: 80;}  /* edit 05.05 */
+img.frame1, img.frame2, img.frame3, img.frame4 {width:92% !important; position:absolute; margin-left:-6.5%;margin-top:-5%; display: none;}
+img.frame1{display: block;}
+div.selectButton{width: 100%; position:absolute;margin-left:-10%;z-index: 101;margin-top:20%;}
+a.left{float:left; width:16% !important;display:block;}
+a.right{float:right; width:16% !important;display:block;}
+
+/****** Step 3 ******/
+
+div.step3{padding:5% 0 40%;position:relative;display:none;} 
+img.step3Img{margin-bottom:5%;}
+img.step3Text{margin:5% 0 0%;}
+input.userName{font-size: 1.5em;width:80%;margin:2% auto;height:1.8em;}
+textarea.msgBox{font-size: 1.5em;width:100%;margin:1% auto 0%;height:5.5em;}
+input.userName, textarea.msgBox{border: 1px solid #ed3479;}
+div.msg{width:80%; margin:5% auto;}
+
+/****** Step 4 ******/
+
+div.step4{padding:5% 0 22%;position:relative;display:none;}
+img.step4Img{margin-bottom:5%;}
+img.step4Text{margin:0% 0 2%;}
+input.userName{font-size: 1.5em;width:80%;margin:2% auto;height:1.8em;}
+textarea.msgBox{font-size: 1.5em;width:100%;margin:1% auto 0%;height:5.5em;}
+input.userName, textarea.msgBox{border: 1px solid #ed3479;}
+div.msg{width:80%; margin:5% auto 0;}
+img.cardBg{width:100%;z-index:49;position: absolute;top:-12%;}
+div.cardContainer{width:100%;position:relative;z-index:80;}
+div.step4Buttons{width:58%;margin:0 auto 2% auto;z-index:52;position: relative;overflow: hidden;}
+div.step4Buttons a{display:block;}
+div.step4Buttons a img{display:block;}
+/* a.lineBtn{float:left;width: 30.5%; margin: 0 1.7% 0 0;} */
+a.fbBtn{float:left;width: 36%; margin: 0 4% 0 0;}
+a.downloadBtn{float:left;width: 60%;}
+img.finalFrame{z-index:51;}
+img.finalImage{z-index:50; position: relative;}
+span.message{position:relative; z-index:52;font-size: 13px;color:#fc5292;text-align: center; width:80%;display: block;margin:7.5% auto 5%;font-weight: bold;}
+span.name{margin:auto;position:relative; z-index:53;font-size: 0.8em;text-align: right; width:80%;display: block;}
+
+div.stepEnd{width:100%; background: #fff;padding:50% 0;}
+
+
+.step1, .step2, .step4, .stepEnd {display:none; overflow: hidden;}
+
+
+#splash{/* width: 100%; */ width: 500px; margin:0 auto;}
+#splash img{width:100%;}
+
+.waiting {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  background: url(../img/bkbg.png);
+  opacity:0.8;
+}
+.waiting img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+/*  footer  */
+div.footer{width: 100%;height: auto;z-index: 201;bottom:0;position:relative;background: #002c6b;}
+div.footer img{width:100%;}
+div.footerText{
+  border-top:1px solid #80acec;
+  padding-top: 1em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+  margin-top: 3px;
+  margin-right: 0px;
+  vertical-align: bottom;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 5px;
+  text-align: left;
+  font-family: "微軟正黑體";
+  line-height: 1.4em;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+div.footer .content{
+  width: 640px;
+  margin: auto;
+  position: relative;
+}
+
+.footer_top{
+  width: 100%;
+  position: relative;
+}
+
+.footer_fb{
+  display: block;
+  width: 5.6%;
+  height: 0;
+  padding: 0 0 5.6% 0;
+  /* background: rgba(255,255,255,0.5); */
+  position: absolute;
+  top:53%;
+  left:78%;
+}
+
+.footer_line{
+  display: block;
+  width: 5.6%;
+  height: 0;
+  padding: 0 0 5.6% 0;
+  /* background: rgba(255,255,255,0.5); */
+  position: absolute;
+  top:53%;
+  left:84.5%;
+}
+
+.footer_youtube{
+  display: block;
+  width: 5.6%;
+  height: 0;
+  padding: 0 0 5.6% 0;
+  /* background: rgba(255,255,255,0.5); */
+  position: absolute;
+  top:53%;
+  left:91%;
+}
+
+div.header .content{
+  width: 640px;
+  margin: auto;
+  position: relative;
+}
+
+
+/************************************* LOADER *************************************/
+
+body{
+    display:none;
+}
+#jpreOverlay {
+    background-color: #fdeff3;
+}
+#jpreSlide{
+    font-size:1em;
+    font-weight:bold;
+    color:#ccc;
+    text-align:center;
+    width:100%;
+    /* height:30%; */
+}
+#jpreLoader{
+    width:100%;
+    height:25px;
+    margin: 151px 0 0 0;
+}
+#jpreBar {
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    
+    background-size:30px 30px;
+    -moz-background-size:30px 30px;
+    -webkit-background-size:30px 30px;
+    -o-background-size:30px 30px;
+   filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#33ffffff',
+      endColorstr='#33000000',
+      GradientType=0 );
+
+    background-color:#ffb8d1;
+    background-image: -moz-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%, 
+        rgba(255,255,255,0.15) 25%, 
+        rgba(255,255,255,0) 25%, 
+        rgba(255,255,255,0) 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        rgba(255,255,255,0) 75%, 
+        rgba(255,255,255,0) 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%,rgba(255,255,255,0.2)), 
+        color-stop(25%,rgba(255,255,255,0.2)), 
+        color-stop(25%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0.2)), 
+        color-stop(75%,rgba(255,255,255,0.2)),
+        color-stop(75%,rgba(255,255,255,0)),
+        color-stop(100%,rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(-45deg, 
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.3) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.3) 50%,
+        rgba(255,255,255,0.3) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -o-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -ms-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(135deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+        
+    animation: progress 3s linear infinite;
+    -moz-animation: progress 3s linear infinite;
+    -webkit-animation: progress 3s linear infinite;
+    -ms-animation: progress 3s linear infinite;
+    -o-animation: progress 3s linear infinite;  
+}
+#jprePercentage {
+    color:#ee3276;
+    font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    text-align:center;
+    top:-100%;
+}
+
+#jpreButton{
+    padding:3px 10px;
+    cursor:pointer;
+    font-weight:bold;
+    line-height:1.5;
+    text-align:center;
+    width:100px;
+    margin:0 auto;
+    color:#fff;
+    text-shadow:-1px -1px 0 #01293F;
+    border:1px solid #2EACEA;
+    
+    border-radius:30px;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    
+    background-color: #23a6ed;
+    background-image: -moz-linear-gradient(top, #23a6ed 0%, #1275aa 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#23a6ed), color-stop(100%,#1275aa));
+    background-image: -webkit-linear-gradient(top, #23a6ed 0%,#1275aa 100%);
+    background-image: -o-linear-gradient(top, #23a6ed 0%,#1275aa 100%);
+    background-image: -ms-linear-gradient(top, #23a6ed 0%,#1275aa 100%);
+    background-image: linear-gradient(to bottom, #23a6ed 0%,#1275aa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23a6ed', endColorstr='#1275aa',GradientType=0 );
+}
+
+@-webkit-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-moz-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-ms-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-o-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+.pc{display: block !important;}
+.mobile{display: none !important;}
+
+
+@media screen and (max-width: 992px) {
+
+div.header .content{width: 100%;}
+
+div.header h1{font-size: 5vw;}
+
+div.footer .content{width: 100%;}
+
+#splash{width: 320px;}
+#jpreLoader{margin: 100px 0 0 0;}
+
+div.container{
+    background: url(../img/mainBg.jpg) 0 0 no-repeat;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;  
+}
+
+.pc{display: none !important;}
+.mobile{display: block !important;}
+
+
+div.step4Buttons{width:87%;}
+a.lineBtn{float:left;width: 30.5%; margin: 0 1.7% 0 0;}
+a.fbBtn{float:left;width: 25%; margin: 0 1.7% 0 0;}
+a.downloadBtn{float:left;width: 41%;}
+
+div.container .fin{width: 100%;}
+
+}

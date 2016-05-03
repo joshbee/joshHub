@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="zh-TW">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>花言巧語，獻給最愛的媽咪</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="img/16x16.png">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div id="splash"><img src="img/splash.jpg"></div>
+        <div class="header">
+            <div class="content">
+                <a href="#" class="logo"></a>
+                <h1>富蘭克林證券投顧</h1>
+                <!-- <img src="img/title.png" class="title"> -->
+                <a href="index.html" class="homeBtn"><img src="img/homeBtn.png"></a>  <!-- edit 04/30 -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="upload">
+                <div class="index">
+                    <img class="indexTitle" src="img/indexTitle.png">
+                    <img class="indexText" src="img/indexText.png">
+                    <a href="#" class="indexBtn" onClick="transitionSection('.index', '.step1');"><img src="img/indexBtn.png"></a>
+                </div>
+                <div class="step1">
+                    <img src="img/step1.png" class="step1Img">
+                    <img src="img/step1Text.png" class="step1Text">
+                    <div class="fileUpload">
+                        <div class="sizeButton">
+                            <a class="plus"><img src="img/plusBtn.png"></a>
+                            <a class="minus"><img src="img/minusBtn.png"></a>
+                        </div>
+                        <input type="file" name="fileImage" id="fileImage">
+                        <img src="img/uploadPhoto.png" class="uploadedImage">
+                    </div>
+                    <a href="#" class="step1Btn" onClick="transitionSection('.step1', '.step2');"><img src="img/step1Btn.png"></a>
+                    <a href="#" class="step1Skip" onClick="transitionSection('.step1', '.step2');"><img src="img/step1Skip.png"></a>
+                </div>
+                <div class="step2">
+                    <img src="img/step2.png" class="step2Img">
+                    <img src="img/step2Text.png" class="step2Text">
+                    <div class="frameSelect">
+                        <div class="selectButton">
+                            <a class="left" onClick="changeFrame('prev');"><img src="img/leftBtn.png"></a>
+                            <a class="right" onClick="changeFrame('next');"><img src="img/rightBtn.png"></a>
+                        </div>
+                        <img src="img/frame1.png" class="frame1">
+                        <img src="img/frame2.png" class="frame2">
+                        <img src="img/frame3.png" class="frame3">
+                        <img src="img/frame4.png" class="frame4">
+                        <img src="img/photoDefault.jpg" class="uploadedImage">
+                    </div>
+                    <div class="prevNext">
+                        <a href="#" class="stepPrev" onClick="transitionSection('.step2', '.step1');"><img src="img/prevBtn.png"></a>
+                        <a href="#" class="stepNext" onClick="transitionSection('.step2', '.step3');"><img src="img/nextBtn.png"></a>
+                    </div>
+                </div>
+                <div class="step3">
+                    <img src="img/step3.png" class="step3Img">
+                    <img src="img/step3Text.png" class="step3Text">
+                    <div class="msg">
+                        <input type="text" placeholder="請輸入您的名字" class="userName">
+                        <textarea maxlength="20" placeholder="請填寫20字內文字" class="msgBox"></textarea>
+                    </div>
+                    <div class="prevNext">
+                        <a href="#" class="stepPrev" onClick="transitionSection('.step3', '.step2'); void(0);"><img src="img/prevBtn.png"></a>
+                        <a href="#" class="stepNext" onClick="transitionSection('.step3', '.step4');"><img src="img/nextBtn.png"></a>
+                    </div>
+                </div>
+                <div class="step4">
+                    <img src="img/step4.png" class="step4Img">
+                    <img src="img/step4Text.png" class="step4Text mobile">
+                    <img src="img/step4Text_pc.png" class="step4Text pc">
+                    <div class="cardContainer">
+                        <img src="img/571edeeeb536c8_98225028_1461640942.png" class="fin_card">                        
+<!--                         <div class="frameSelect frameFinal">                        
+                            <img src="img/frame1.png" class="frame1 finalFrame">
+                            <img src="img/frame2.png" class="frame2 finalFrame">
+                            <img src="img/frame3.png" class="frame3 finalFrame">
+                            <img src="img/frame4.png" class="frame4 finalFrame">
+                            <img src="img/photoDefault.jpg" class="finalImage">
+                        </div>                        
+                        <span class="message">親愛的媽媽，感謝妳！祝妳母親節快樂！</span>
+                        <span class="name">~王小明</span>
+                        <img src="img/cardBg.png" class="cardBg"> -->
+                    </div>                    
+                    <div class="step4Buttons">
+                        <a href="#" class="lineBtn mobile" onClick="transitionSection('.step4', '.stepEnd');"><img src="img/lineBtn.png"></a>
+                        <a href="#" class="fbBtn"><img src="img/fbBtn.png"></a>
+                        <a href="#" class="downloadBtn"><img src="img/downloadBtn.png"></a>
+                    </div>
+                </div>
+                <div class="stepEnd">
+                    <a href="index.html" class="stepEnd"><img src="img/stepEnd.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <div class="footer_top">
+                    <a href="https://www.facebook.com/franklin.taiwan/" target="_blank" class="footer_fb"></a>
+                    <a href="http://www.franklin.com.tw/areas/c2014_09_line/" target="_blank" class="footer_line"></a>
+                    <a href="https://www.youtube.com/user/franklin0800885888" target="_blank" class="footer_youtube"></a>
+                    <img src="img/footer.jpg" alt="國民理財專線：0800-885-888" class="footerPic">
+                </div>
+
+                <div class="footerText">
+                    本境外基金經金融監督管理委員會核准或申報生效在國內募集及銷售，惟不表示絕無風險。基金經理公司以往之經理績效不保證基金之最低投資收益；基金經理公司除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。<br /><br />【富蘭克林證券投顧獨立經營管理】。
+                </div>
+            </div>
+        </div>
+        <div class="waiting" style="display: none;"><img src="img/loading.gif" alt=""></div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jpreloader.min.js"></script>
+        <script src="js/gs/TweenMax.min.js"></script>
+        <script src="js/gs/TimelineMax.min.js"></script>  
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('body').jpreLoader({splashID: "#splash", loaderVPos: '35%',splashVPos: '35%',autoClose: true});
+            });
+        </script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
